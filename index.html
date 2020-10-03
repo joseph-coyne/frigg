@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Frigg</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="search">
+				<form action="http://www.google.com/search" method="get">
+					<input
+						type="text"
+						name="q"
+						id="search"
+						placeholder="Wisdom is welcome from wherever it comes."
+						onkeypress="getFocus()"
+						onfocus="this.placeholder = ''"
+						onblur="this.placeholder = 'Fine. Keep your secrets.'"
+						required
+					/>
+				</form>
+			</div>
+			<div class="all-links">
+				<div class="links">
+					<h1>Work</h1>
+					<ul>
+						<li><a href="https://www.github.com">Github</a></li>
+						<li><a href="https://www.stackoverflow.com">Stack Overflow</a></li>
+						<li><a href="https://www.trello.com">Trello</a></li>
+						<li><a href="localhost:8080">localhost</a></li>
+					</ul>
+				</div>
+				<div class="links">
+					<h1>Social</h1>
+					<ul>
+						<li><a href="https://www.messenger.com">Messenger</a></li>
+						<li><a href="https://messages.google.com/">Phone</a></li>
+						<li><a href="https://old.reddit.com">Reddit</a></li>
+						<li><a href="https://www.facebook.com">Facebook</a></li>
+					</ul>
+				</div>
+
+				<div class="links">
+					<h1>Media</h1>
+					<ul>
+						<li><a href="https://www.youtube.com">Youtube</a></li>
+						<li><a href="https://www.plex.com">Plex</a></li>
+						<li><a href="https://www.netflix.com">Netflix</a></li>
+						<li><a href="https://www.hulu.com">Hulu</a></li>
+						<li><a href="https://www.twitch.com">Twitch</a></li>
+						<li><a href="https://www.crunchyroll.com">Crunchyroll</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script>
+			const main = document.body;
+			main.onkeypress = function () {
+				getFocus();
+			};
+			function getFocus() {
+				document.getElementById('search').focus();
+			}
+		</script>
+	</body>
+</html>
